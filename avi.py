@@ -1,14 +1,3 @@
-"""
-Privacy Risk Monitoring Dataset Generator (Synthetic Audit Logs)
-- Staff totals: 86 Doctors, 166 Nurses, 15 Admin, 21 Receptionists, 12 Pharmacists (300 users)
-- Log rows: 5000
-- Output: privacy_risk_monitoring_dataset.csv
-
-Notes:
-- This generates ACCESS LOG EVENTS (rows), not a staff table.
-- You can optionally "inject" the five evaluation scenarios (A–E) near the bottom.
-"""
-
 from __future__ import annotations
 import random
 from datetime import datetime, timedelta
@@ -292,3 +281,4 @@ df = df.head(NUM_ROWS)
 # ----------------------------
 df.to_csv(OUTPUT_PATH, index=False)
 print(f"Saved {len(df)} rows to {OUTPUT_PATH}")
+
