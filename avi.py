@@ -265,20 +265,12 @@ def inject_scenario_e(df_: pd.DataFrame) -> None:
     }
     df_.loc[len(df_)] = row
 
-# Uncomment any injections you want guaranteed:
-# inject_scenario_a(df)
-# inject_scenario_b(df)
-# inject_scenario_c(df, n=30)
-# inject_scenario_d(df)
-# inject_scenario_e(df)
 
-# If you injected scenarios, you may exceed 5000 rows.
-# To keep EXACTLY 5000 rows, trim:
 df = df.head(NUM_ROWS)
 
-# ----------------------------
 # 5) Save
-# ----------------------------
+
 df.to_csv(OUTPUT_PATH, index=False)
 print(f"Saved {len(df)} rows to {OUTPUT_PATH}")
+
 
